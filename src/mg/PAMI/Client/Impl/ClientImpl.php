@@ -185,7 +185,7 @@ class ClientImpl implements IClient
 	    @stream_set_blocking($this->_socket, 0);
 	    $this->_currentProcessingMessage = '';
 	    //register_tick_function(array($this, 'process'));
-	    if ($this->_logger->isDebugEnabled()) {
+	    if ($this->_logger && $this->_logger->isDebugEnabled()) {
 	        $this->_logger->debug('Logged in successfully to ami.');
 	    }
 	}
@@ -257,7 +257,7 @@ class ClientImpl implements IClient
 	{
 	    $msgs = $this->getMessages();
 	    foreach ($msgs as $aMsg) {
-    	    if ($this->_logger->isDebugEnabled()) {
+    	    if ($this->_logger && $this->_logger->isDebugEnabled()) {
        	        $this->_logger->debug(
     	        	'------ Received: ------ ' . "\n" . $aMsg . "\n\n"
     	        );
@@ -284,7 +284,7 @@ class ClientImpl implements IClient
                 $response = $this->findResponse($event);
                 $response->addEvent($event);
     	    }
-    	    if ($this->_logger->isDebugEnabled()) {
+    	    if ($this->_logger && $this->_logger->isDebugEnabled()) {
        	        $this->_logger->debug('----------------');
     	    }
 	    }
@@ -396,7 +396,7 @@ class ClientImpl implements IClient
 	{
 	    $messageToSend = $message->serialize();
 	    $length = strlen($messageToSend);
-	    if ($this->_logger->isDebugEnabled()) {
+	    if ($this->_logger && $this->_logger->isDebugEnabled()) {
 	        $this->_logger->debug(
 	        	'------ Sending: ------ ' . "\n" . $messageToSend . '----------'
 	        );
@@ -428,7 +428,7 @@ class ClientImpl implements IClient
 	 */
 	public function close()
 	{
-	    if ($this->_logger->isDebugEnabled()) {
+	    if ($this->_logger && $this->_logger->isDebugEnabled()) {
 	        $this->_logger->debug('Closing connection to asterisk.');
 	    }
 		@stream_socket_shutdown($this->_socket, STREAM_SHUT_RDWR);
@@ -445,8 +445,11 @@ class ClientImpl implements IClient
 	{
         if (isset($options['log4php.properties'])) {
             \Logger::configure($options['log4php.properties']);
+			$this->_logger = \Logger::getLogger('Pami.ClientImpl');
         }
-        $this->_logger = \Logger::getLogger('Pami.ClientImpl');
+		else {
+			$this->_logger = null;
+		}
 	    $this->_host = $options['host'];
 		$this->_port = intval($options['port']);
 		$this->_user = $options['username'];
