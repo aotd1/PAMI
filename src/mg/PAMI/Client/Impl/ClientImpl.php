@@ -60,7 +60,7 @@ class ClientImpl implements IClient
      * log4php logger or dummy.
      * @var Logger
      */
-    private $_logger;
+    // private $_logger;
 
     /**
      * Hostname
@@ -189,9 +189,9 @@ class ClientImpl implements IClient
 	    @stream_set_blocking($this->_socket, 0);
 	    $this->_currentProcessingMessage = '';
 	    //register_tick_function(array($this, 'process'));
-	    if ($this->_logger && $this->_logger->isDebugEnabled()) {
-	        $this->_logger->debug('Logged in successfully to ami.');
-	    }
+	    //if ($this->_logger && $this->_logger->isDebugEnabled()) {
+	    //    $this->_logger->debug('Logged in successfully to ami.');
+	    //}
 	}
 
 	/**
@@ -261,11 +261,11 @@ class ClientImpl implements IClient
 	{
 	    $msgs = $this->getMessages();
 	    foreach ($msgs as $aMsg) {
-    	    if ($this->_logger && $this->_logger->isDebugEnabled()) {
-       	        $this->_logger->debug(
-    	        	'------ Received: ------ ' . "\n" . $aMsg . "\n\n"
-    	        );
-    	    }
+    	    //if ($this->_logger && $this->_logger->isDebugEnabled()) {
+       	    //    $this->_logger->debug(
+    	    //    	'------ Received: ------ ' . "\n" . $aMsg . "\n\n"
+    	    //    );
+    	    //}
     	    $resPos = strpos($aMsg, 'Response:');
     	    $evePos = strpos($aMsg, 'Event:');
     	    if (($resPos !== false) && (($resPos < $evePos) || $evePos === false)) {
@@ -288,9 +288,9 @@ class ClientImpl implements IClient
                 $response = $this->findResponse($event);
                 $response->addEvent($event);
     	    }
-    	    if ($this->_logger && $this->_logger->isDebugEnabled()) {
-       	        $this->_logger->debug('----------------');
-    	    }
+    	    //if ($this->_logger && $this->_logger->isDebugEnabled()) {
+       	    //    $this->_logger->debug('----------------');
+    	    //}
 	    }
 	}
 
@@ -400,11 +400,11 @@ class ClientImpl implements IClient
 	{
 	    $messageToSend = $message->serialize();
 	    $length = strlen($messageToSend);
-	    if ($this->_logger && $this->_logger->isDebugEnabled()) {
-	        $this->_logger->debug(
-	        	'------ Sending: ------ ' . "\n" . $messageToSend . '----------'
-	        );
-        }
+	    //if ($this->_logger && $this->_logger->isDebugEnabled()) {
+	    //    $this->_logger->debug(
+	    //    	'------ Sending: ------ ' . "\n" . $messageToSend . '----------'
+	    //    );
+        //}
 	    $this->_lastActionId = $message->getActionId();
 	    if (@fwrite($this->_socket, $messageToSend) < $length) {
     	    throw new ClientException('Could not send message');
@@ -432,9 +432,9 @@ class ClientImpl implements IClient
 	 */
 	public function close()
 	{
-	    if ($this->_logger && $this->_logger->isDebugEnabled()) {
-	        $this->_logger->debug('Closing connection to asterisk.');
-	    }
+	    //if ($this->_logger && $this->_logger->isDebugEnabled()) {
+	    //    $this->_logger->debug('Closing connection to asterisk.');
+	    //}
 		@stream_socket_shutdown($this->_socket, STREAM_SHUT_RDWR);
 	}
 
@@ -447,13 +447,15 @@ class ClientImpl implements IClient
 	 */
 	public function __construct(array $options)
 	{
-        if (isset($options['log4php.properties'])) {
+        /*
+		if (isset($options['log4php.properties'])) {
             \Logger::configure($options['log4php.properties']);
 			$this->_logger = \Logger::getLogger('Pami.ClientImpl');
         }
 		else {
 			$this->_logger = null;
 		}
+		*/
 	    $this->_host = $options['host'];
 		$this->_port = intval($options['port']);
 		$this->_user = $options['username'];
