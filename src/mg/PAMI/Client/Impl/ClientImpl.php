@@ -396,7 +396,7 @@ class ClientImpl implements IClient
 	 * @throws PAMI\Client\Exception\ClientException
 	 * @return PAMI\Message\Response\ResponseMessage
 	 */
-	public function send(OutgoingMessage $message)
+	public function send(OutgoingMessage $message, $timeout = -1)
 	{
 	    $messageToSend = $message->serialize();
 	    $length = strlen($messageToSend);
@@ -409,8 +409,12 @@ class ClientImpl implements IClient
 	    if (@fwrite($this->_socket, $messageToSend) < $length) {
     	    throw new ClientException('Could not send message');
 	    }
+
+        if($timeout < 0)
+            $timeout = $this->_rTimeout;
+
 	    $read = 0;
-	    while($read <= $this->_rTimeout) {
+	    while($read <= $timeout) {
 	        $this->process();
 	        $response = $this->getRelated($message);
 	        if ($response != false) {
@@ -418,7 +422,7 @@ class ClientImpl implements IClient
 	            return $response;
 	        }
 	        usleep(1000); // 1ms delay
-	        if ($this->_rTimeout > 0) {
+	        if ($timeout > 0) {
 	            $read++;
 	        }
 	    }
