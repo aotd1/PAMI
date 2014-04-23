@@ -18,6 +18,9 @@
       "PAMI": "src/mg"
     }
   },
+  "suggest": {
+    "marcelog/PAGI": "Asterisk Gateway Interface"
+  },
   "require": {
     "php": ">=5.3.3"
   }
