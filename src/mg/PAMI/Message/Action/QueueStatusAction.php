@@ -46,9 +46,10 @@ class QueueStatusAction extends ActionMessage
     /**
      * Constructor.
      *
-     * @param string $queue The queue (optional).
+     * @param bool|string $queue The queue (optional).
      *
-     * @return void
+     * @param bool $member
+     * @return \PAMI\Message\Action\QueueStatusAction
      */
     public function __construct($queue = false, $member = false)
     {

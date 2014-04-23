@@ -48,7 +48,7 @@ class LocalOptimizeAwayAction extends ActionMessage
      *
      * @param string $channel The channel name to optimize away.
      *
-     * @return void
+     * @return \PAMI\Message\Action\LocalOptimizeAwayAction
      */
     public function __construct($channel)
     {

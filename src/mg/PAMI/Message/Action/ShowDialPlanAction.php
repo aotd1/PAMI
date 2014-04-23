@@ -46,10 +46,10 @@ class ShowDialPlanAction extends ActionMessage
     /**
      * Constructor.
      *
-     * @param string $context   Show a specific context (optional)
-     * @param string $extension Show a specific extension (optional)
+     * @param bool|string $context Show a specific context (optional)
+     * @param bool|string $extension Show a specific extension (optional)
      *
-     * @return void
+     * @return \PAMI\Message\Action\ShowDialPlanAction
      */
     public function __construct($context = false, $extension = false)
     {

@@ -29,8 +29,6 @@
  */
 namespace PAMI\Message\Event;
 
-use PAMI\Message\IncomingMessage;
-
 /**
  * This is an unknown (not implemented yet) event received from ami.
  *

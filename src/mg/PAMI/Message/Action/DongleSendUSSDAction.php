@@ -46,10 +46,10 @@ class DongleSendUSSDAction extends ActionMessage
     /**
      * Constructor.
      *
-     * @param string $device  Device name (like dongle01).
-     * @param string $ussd    USSD to send.
+     * @param string $device Device name (like dongle01).
+     * @param string $ussd USSD to send.
      *
-     * @return void
+     * @return \PAMI\Message\Action\DongleSendUSSDAction
      */
     public function __construct($device, $ussd)
     {

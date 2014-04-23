@@ -46,10 +46,10 @@ class DongleRestartAction extends ActionMessage
     /**
      * Constructor.
      *
-     * @param string $when   now | gracefully | when convenient
+     * @param string $when now | gracefully | when convenient
      * @param string $device Dongle device name.
      *
-     * @return void
+     * @return \PAMI\Message\Action\DongleRestartAction
      */
     public function __construct($when, $device)
     {

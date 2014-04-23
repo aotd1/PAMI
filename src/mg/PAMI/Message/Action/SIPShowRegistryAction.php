@@ -46,7 +46,7 @@ class SIPShowRegistryAction extends ActionMessage
     /**
      * Constructor.
      *
-     * @return void
+     * @return \PAMI\Message\Action\SIPShowRegistryAction
      */
     public function __construct()
     {

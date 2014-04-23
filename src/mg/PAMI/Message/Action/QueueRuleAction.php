@@ -46,9 +46,9 @@ class QueueRuleAction extends ActionMessage
     /**
      * Constructor.
      *
-     * @param string $rule Rule.
+     * @param bool|string $rule Rule.
      *
-     * @return void
+     * @return \PAMI\Message\Action\QueueRuleAction
      */
     public function __construct($rule = false)
     {

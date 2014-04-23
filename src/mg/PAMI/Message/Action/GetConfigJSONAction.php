@@ -48,7 +48,7 @@ class GetConfigJSONAction extends ActionMessage
      *
      * @param string $filename Configuration filename (e.g.: foo.conf).
      *
-     * @return void
+     * @return \PAMI\Message\Action\GetConfigJSONAction
      */
     public function __construct($filename)
     {

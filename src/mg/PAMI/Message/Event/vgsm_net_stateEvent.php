@@ -31,8 +31,6 @@
  */
 namespace PAMI\Message\Event;
 
-use PAMI\Message\Event\EventMessage;
-
 /**
  * Whenever the registration status of a GSM module changes, a
  * vgsm_net_state event is generated. This event is available starting

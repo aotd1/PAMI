@@ -46,7 +46,7 @@ class DAHDIShowChannelsAction extends ActionMessage
     /**
      * Constructor.
      *
-     * @return void
+     * @return \PAMI\Message\Action\DAHDIShowChannelsAction
      */
     public function __construct()
     {

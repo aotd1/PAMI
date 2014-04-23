@@ -46,9 +46,9 @@ class QueueSummaryAction extends ActionMessage
     /**
      * Constructor.
      *
-     * @param string $queue The queue (optional).
+     * @param bool|string $queue The queue (optional).
      *
-     * @return void
+     * @return \PAMI\Message\Action\QueueSummaryAction
      */
     public function __construct($queue = false)
     {

@@ -48,7 +48,7 @@ class ModuleCheckAction extends ActionMessage
      *
      * @param string $module Module name.
      *
-     * @return void
+     * @return \PAMI\Message\Action\ModuleCheckAction
      */
     public function __construct($module)
     {

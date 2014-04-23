@@ -46,11 +46,11 @@ class BridgeAction extends ActionMessage
     /**
      * Constructor.
      *
-     * @param string  $channel1 Channel1
-     * @param string  $channel1 Channel1
-     * @param boolean $tone     Play courtesy tone to Channel2
+     * @param string $channel1 Channel 1
+     * @param string $channel2 Channel 2
+     * @param boolean $tone Play courtesy tone to Channel2
      *
-     * @return void
+     * @return \PAMI\Message\Action\BridgeAction
      */
     public function __construct($channel1, $channel2, $tone = false)
     {

@@ -48,7 +48,7 @@ class ListCategoriesAction extends ActionMessage
      *
      * @param string $file File to dump categories from.
      *
-     * @return void
+     * @return \PAMI\Message\Action\ListCategoriesAction
      */
     public function __construct($file)
     {

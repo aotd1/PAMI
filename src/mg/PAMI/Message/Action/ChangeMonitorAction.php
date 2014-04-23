@@ -46,10 +46,10 @@ class ChangeMonitorAction extends ActionMessage
     /**
      * Constructor.
      *
-     * @param string $channel  Channel to monitor.
+     * @param string $channel Channel to monitor.
      * @param string $filename Absolute path to target filename.
      *
-     * @return void
+     * @return \PAMI\Message\Action\ChangeMonitorAction
      */
     public function __construct($channel, $filename)
     {

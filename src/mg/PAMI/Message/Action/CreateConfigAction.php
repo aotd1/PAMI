@@ -48,7 +48,7 @@ class CreateConfigAction extends ActionMessage
      *
      * @param string $filename Configuration filename (e.g.: foo.conf).
      *
-     * @return void
+     * @return \PAMI\Message\Action\CreateConfigAction
      */
     public function __construct($filename)
     {

@@ -46,7 +46,7 @@ class LogoffAction extends ActionMessage
     /**
      * Constructor.
      *
-     * @return void
+     * @return \PAMI\Message\Action\LogoffAction
      */
     public function __construct()
     {

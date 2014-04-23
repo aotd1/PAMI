@@ -48,7 +48,7 @@ class UnpauseMonitorAction extends ActionMessage
      *
      * @param string $channel Channel monitored to unpause.
      *
-     * @return void
+     * @return \PAMI\Message\Action\UnpauseMonitorAction
      */
     public function __construct($channel)
     {

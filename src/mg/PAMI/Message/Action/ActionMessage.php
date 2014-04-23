@@ -49,7 +49,7 @@ abstract class ActionMessage extends OutgoingMessage
      *
      * @param string $what Action command.
      *
-     * @return void
+     * @return \PAMI\Message\Action\ActionMessage
      */
     public function __construct($what)
     {
@@ -66,7 +66,7 @@ abstract class ActionMessage extends OutgoingMessage
      *
      * Therefore we'll throw an exception when the ActionID is too long.
      *
-     * @param $actionID The Action ID to have this action known by
+     * @param string $actionID The Action ID to have this action known by
      *
      * @return void
      * @throws PAMIException When the ActionID is more then 69 characters long

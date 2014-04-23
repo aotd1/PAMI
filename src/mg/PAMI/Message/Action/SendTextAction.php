@@ -49,7 +49,7 @@ class SendTextAction extends ActionMessage
      * @param string $channel Channel to send message to.
      * @param string $message Message to send.
      *
-     * @return void
+     * @return \PAMI\Message\Action\SendTextAction
      */
     public function __construct($channel, $message)
     {

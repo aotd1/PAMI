@@ -45,6 +45,7 @@ class Autoloader
      * Called by php to load a given class. Returns true if the class was
      * successfully loaded.
      *
+     * @param string $class
      * @return boolean
      */
     public static function load($class)

@@ -48,7 +48,7 @@ class DongleReloadAction extends ActionMessage
      *
      * @param string $when now | gracefully | when convenient
      *
-     * @return void
+     * @return \PAMI\Message\Action\DongleReloadAction
      */
     public function __construct($when)
     {

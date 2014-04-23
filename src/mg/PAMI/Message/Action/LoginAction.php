@@ -46,10 +46,10 @@ class LoginAction extends ActionMessage
     /**
      * Constructor.
      *
-     * @param string $user     AMI username.
+     * @param string $user AMI username.
      * @param string $password AMI password.
      *
-     * @return void
+     * @return \PAMI\Message\Action\LoginAction
      */
     public function __construct($user, $password)
     {

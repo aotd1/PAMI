@@ -46,7 +46,7 @@ class ListCommandsAction extends ActionMessage
     /**
      * Constructor.
      *
-     * @return void
+     * @return \PAMI\Message\Action\ListCommandsAction
      */
     public function __construct()
     {

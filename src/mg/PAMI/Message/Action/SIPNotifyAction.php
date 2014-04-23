@@ -48,7 +48,7 @@ class SIPNotifyAction extends ActionMessage
      *
      * @param string $channel Peer to receive the notify.
      *
-     * @return void
+     * @return \PAMI\Message\Action\SIPNotifyAction
      */
     public function __construct($channel)
     {

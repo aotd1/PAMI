@@ -48,7 +48,7 @@ class MeetmeListAction extends ActionMessage
      *
      * @param string $conference Conference number.
      *
-     * @return void
+     * @return \PAMI\Message\Action\MeetmeListAction
      */
     public function __construct($conference)
     {

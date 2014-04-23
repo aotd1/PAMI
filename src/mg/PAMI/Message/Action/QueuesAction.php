@@ -46,7 +46,7 @@ class QueuesAction extends ActionMessage
     /**
      * Constructor.
      *
-     * @return void
+     * @return \PAMI\Message\Action\QueuesAction
      */
     public function __construct()
     {

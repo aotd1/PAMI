@@ -46,12 +46,12 @@ class QueueReloadAction extends ActionMessage
     /**
      * Constructor.
      *
-     * @param string  $queue      Queue name.
-     * @param boolean $members    Reload members.
-     * @param boolean $rules      Reload rules.
+     * @param bool|string $queue Queue name.
+     * @param boolean $members Reload members.
+     * @param boolean $rules Reload rules.
      * @param boolean $parameters Reload parameters.
      *
-     * @return void
+     * @return \PAMI\Message\Action\QueueReloadAction
      */
     public function __construct(
         $queue = false, $members = false, $rules = false, $parameters = false

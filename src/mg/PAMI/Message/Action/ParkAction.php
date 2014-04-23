@@ -46,12 +46,12 @@ class ParkAction extends ActionMessage
     /**
      * Constructor.
      *
-     * @param string  $channel1 Channel name to park.
-     * @param string  $channel2 Channel to announce park info to (and return to if timeout).
-     * @param integer $timeout  Number of milliseconds to wait before callback.
-     * @param string  $lot      Parking lot to park channel in.
+     * @param string $channel1 Channel name to park.
+     * @param string $channel2 Channel to announce park info to (and return to if timeout).
+     * @param bool|int $timeout Number of milliseconds to wait before callback.
+     * @param bool|string $lot Parking lot to park channel in.
      *
-     * @return void
+     * @return \PAMI\Message\Action\ParkAction
      */
     public function __construct($channel1, $channel2, $timeout = false, $lot = false)
     {

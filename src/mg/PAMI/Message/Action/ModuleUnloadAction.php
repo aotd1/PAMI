@@ -56,7 +56,7 @@ class ModuleUnloadAction extends ActionMessage
      * rtp
      * http Module name.
      *
-     * @return void
+     * @return \PAMI\Message\Action\ModuleUnloadAction
      */
     public function __construct($module)
     {

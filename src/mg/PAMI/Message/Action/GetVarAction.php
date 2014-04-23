@@ -46,10 +46,10 @@ class GetVarAction extends ActionMessage
     /**
      * Constructor.
      *
-     * @param string $name    Variable name.
-     * @param string $channel Optional channel name.
+     * @param string $name Variable name.
+     * @param bool|string $channel Optional channel name.
      *
-     * @return void
+     * @return \PAMI\Message\Action\GetVarAction
      */
     public function __construct($name, $channel = false)
     {

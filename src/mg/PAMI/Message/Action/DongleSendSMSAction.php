@@ -46,11 +46,11 @@ class DongleSendSMSAction extends ActionMessage
     /**
      * Constructor.
      *
-     * @param string $device  Device name (like dongle01).
-     * @param string $number  Destination number.
+     * @param string $device Device name (like dongle01).
+     * @param string $number Destination number.
      * @param string $message What to send.
      *
-     * @return void
+     * @return \PAMI\Message\Action\DongleSendSMSAction
      */
     public function __construct($device, $number, $message)
     {

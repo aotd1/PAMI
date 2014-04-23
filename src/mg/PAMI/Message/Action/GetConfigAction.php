@@ -46,10 +46,10 @@ class GetConfigAction extends ActionMessage
     /**
      * Constructor.
      *
-     * @param string  $filename Configuration filename (e.g.: foo.conf).
+     * @param string $filename Configuration filename (e.g.: foo.conf).
      * @param boolean $category Category in configuration file.
      *
-     * @return void
+     * @return \PAMI\Message\Action\GetConfigAction
      */
     public function __construct($filename, $category = false)
     {

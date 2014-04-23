@@ -79,7 +79,7 @@ class EventFactoryImpl
     /**
      * Constructor. Nothing to see here, move along.
      *
-     * @return void
+     * @return \PAMI\Message\Event\Factory\Impl\EventFactoryImpl
      */
     public function __construct()
     {

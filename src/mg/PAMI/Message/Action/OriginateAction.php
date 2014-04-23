@@ -130,7 +130,7 @@ class OriginateAction extends ActionMessage
     /**
      * Sets Account key.
      *
-     * @param string Account code.
+     * @param string $account Account code.
      *
      * @return void
      */
@@ -168,7 +168,7 @@ class OriginateAction extends ActionMessage
      *
      * @param string $channel Channel to call to.
      *
-     * @return void
+     * @return \PAMI\Message\Action\OriginateAction
      */
     public function __construct($channel)
     {

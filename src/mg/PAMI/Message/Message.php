@@ -181,6 +181,7 @@ abstract class Message
     /**
      * Returns the end of message token appended to the end of a given message.
      *
+     * @param $message
      * @return string
      */
     protected function finishMessage($message)
@@ -239,7 +240,7 @@ abstract class Message
     /**
      * Constructor.
      *
-     * @return void
+     * @return \PAMI\Message\Message
      */
     public function __construct()
     {

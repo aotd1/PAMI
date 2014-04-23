@@ -47,9 +47,9 @@ class DBDelTreeAction extends ActionMessage
      * Constructor.
      *
      * @param string $family Family.
-     * @param string $key    Name (optional)
+     * @param bool|string $key Name (optional)
      *
-     * @return void
+     * @return \PAMI\Message\Action\DBDelTreeAction
      */
     public function __construct($family, $key = false)
     {

@@ -46,7 +46,7 @@ class AgentsAction extends ActionMessage
     /**
      * Constructor.
      *
-     * @return void
+     * @return \PAMI\Message\Action\AgentsAction
      */
     public function __construct()
     {

@@ -46,9 +46,9 @@ class QueueResetAction extends ActionMessage
     /**
      * Constructor.
      *
-     * @param string $queue Queue name.
+     * @param bool|string $queue Queue name.
      *
-     * @return void
+     * @return \PAMI\Message\Action\QueueResetAction
      */
     public function __construct($queue = false)
     {

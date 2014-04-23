@@ -46,7 +46,7 @@ class SIPPeersAction extends ActionMessage
     /**
      * Constructor.
      *
-     * @return void
+     * @return \PAMI\Message\Action\SIPPeersAction
      */
     public function __construct()
     {

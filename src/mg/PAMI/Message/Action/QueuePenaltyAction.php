@@ -46,10 +46,12 @@ class QueuePenaltyAction extends ActionMessage
     /**
      * Constructor.
      *
-     * @param string $queue Queue name.
-     * @param string $event Event.
+     * @param string $interface
+     * @param $penalty
+     * @param bool|string $queue Queue name.
+     * @internal param string $event Event.
      *
-     * @return void
+     * @return \PAMI\Message\Action\QueuePenaltyAction
      */
     public function __construct($interface, $penalty, $queue = false)
     {

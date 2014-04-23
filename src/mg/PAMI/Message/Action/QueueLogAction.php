@@ -86,7 +86,7 @@ class QueueLogAction extends ActionMessage
      * @param string $queue Queue name.
      * @param string $event Event.
      *
-     * @return void
+     * @return \PAMI\Message\Action\QueueLogAction
      */
     public function __construct($queue, $event)
     {

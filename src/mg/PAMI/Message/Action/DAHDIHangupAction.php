@@ -48,7 +48,7 @@ class DAHDIHangupAction extends ActionMessage
      *
      * @param string $channel Channel to hangup.
      *
-     * @return void
+     * @return \PAMI\Message\Action\DAHDIHangupAction
      */
     public function __construct($channel)
     {

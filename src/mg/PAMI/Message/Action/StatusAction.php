@@ -46,9 +46,9 @@ class StatusAction extends ActionMessage
     /**
      * Constructor.
      *
-     * @param string $channel Channel to query (optional)
+     * @param bool|string $channel Channel to query (optional)
      *
-     * @return void
+     * @return \PAMI\Message\Action\StatusAction
      */
     public function __construct($channel = false)
     {

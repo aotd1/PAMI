@@ -46,11 +46,11 @@ class JabberSendAction extends ActionMessage
     /**
      * Constructor.
      *
-     * @param string $jabber  Client or transport Asterisk uses to connect to JABBER.
-     * @param string $jid     XMPP/Jabber JID (Name) of recipient.
+     * @param string $jabber Client or transport Asterisk uses to connect to JABBER.
+     * @param string $jid XMPP/Jabber JID (Name) of recipient.
      * @param string $message Message to be sent to the buddy.
      *
-     * @return void
+     * @return \PAMI\Message\Action\JabberSendAction
      */
     public function __construct($jabber, $jid, $message)
     {

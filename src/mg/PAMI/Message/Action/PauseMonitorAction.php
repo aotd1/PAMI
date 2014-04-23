@@ -48,7 +48,7 @@ class PauseMonitorAction extends ActionMessage
      *
      * @param string $channel Channel monitored to pause.
      *
-     * @return void
+     * @return \PAMI\Message\Action\PauseMonitorAction
      */
     public function __construct($channel)
     {

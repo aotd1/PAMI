@@ -85,7 +85,7 @@ abstract class IncomingMessage extends Message
      *
      * @param string $rawContent Original message as received from ami.
      *
-     * @return void
+     * @return \PAMI\Message\IncomingMessage
      */
     public function __construct($rawContent)
     {

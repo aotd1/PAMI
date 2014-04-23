@@ -48,7 +48,7 @@ class DongleResetAction extends ActionMessage
      *
      * @param string $device Dongle device name.
      *
-     * @return void
+     * @return \PAMI\Message\Action\DongleResetAction
      */
     public function __construct($device)
     {

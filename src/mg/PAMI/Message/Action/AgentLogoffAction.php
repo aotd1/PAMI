@@ -47,9 +47,9 @@ class AgentLogoffAction extends ActionMessage
      * Constructor.
      *
      * @param string $agent Agent ID of the agent to log off.
-     * @param string $soft  Set to true to not hangup existing calls.
+     * @param bool|string $soft Set to true to not hangup existing calls.
      *
-     * @return void
+     * @return \PAMI\Message\Action\AgentLogoffAction
      */
     public function __construct($agent, $soft = false)
     {

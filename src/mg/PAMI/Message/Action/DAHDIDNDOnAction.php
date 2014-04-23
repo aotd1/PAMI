@@ -48,7 +48,7 @@ class DAHDIDNDOnAction extends ActionMessage
      *
      * @param string $channel Target dahdi Channel.
      *
-     * @return void
+     * @return \PAMI\Message\Action\DAHDIDNDOnAction
      */
     public function __construct($channel)
     {

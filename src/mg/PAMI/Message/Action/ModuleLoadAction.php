@@ -56,7 +56,7 @@ class ModuleLoadAction extends ActionMessage
      * rtp
      * http Module name.
      *
-     * @return void
+     * @return \PAMI\Message\Action\ModuleLoadAction
      */
     public function __construct($module)
     {

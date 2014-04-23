@@ -47,9 +47,9 @@ class DongleSendPDUAction extends ActionMessage
      * Constructor.
      *
      * @param string $device Device name (like dongle01).
-     * @param string $pdu    PDU to send.
+     * @param string $pdu PDU to send.
      *
-     * @return void
+     * @return \PAMI\Message\Action\DongleSendPDUAction
      */
     public function __construct($device, $pdu)
     {

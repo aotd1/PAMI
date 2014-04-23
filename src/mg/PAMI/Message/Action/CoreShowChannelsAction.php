@@ -46,7 +46,7 @@ class CoreShowChannelsAction extends ActionMessage
     /**
      * Constructor.
      *
-     * @return void
+     * @return \PAMI\Message\Action\CoreShowChannelsAction
      */
     public function __construct()
     {

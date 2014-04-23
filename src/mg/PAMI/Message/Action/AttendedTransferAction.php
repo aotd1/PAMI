@@ -46,12 +46,12 @@ class AttendedTransferAction extends ActionMessage
     /**
      * Constructor.
      *
-     * @param string $channel   Transferer's channel.
+     * @param string $channel Transferer's channel.
      * @param string $extension Extension to transfer to.
-     * @param string $context   Context to transfer to.
-     * @param string $priority  Priority to transfer to.
+     * @param string $context Context to transfer to.
+     * @param string $priority Priority to transfer to.
      *
-     * @return void
+     * @return \PAMI\Message\Action\AttendedTransferAction
      */
     public function __construct($channel, $extension, $context, $priority)
     {

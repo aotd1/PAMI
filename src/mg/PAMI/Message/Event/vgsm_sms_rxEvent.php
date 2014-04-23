@@ -31,8 +31,6 @@
  */
 namespace PAMI\Message\Event;
 
-use PAMI\Message\Event\EventMessage;
-
 /**
  * On reception of an inbound SMS (SMS-DELIVERY) the message will also be
  * reported as a manager event, however, acknowledgment still relies on SMS

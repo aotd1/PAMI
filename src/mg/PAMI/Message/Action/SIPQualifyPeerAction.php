@@ -48,7 +48,7 @@ class SIPQualifyPeerAction extends ActionMessage
      *
      * @param string $peer The peer name you want to qualify.
      *
-     * @return void
+     * @return \PAMI\Message\Action\SIPQualifyPeerAction
      */
     public function __construct($peer)
     {

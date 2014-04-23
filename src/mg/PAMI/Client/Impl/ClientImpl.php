@@ -34,9 +34,7 @@ use PAMI\Message\OutgoingMessage;
 use PAMI\Message\Message;
 use PAMI\Message\IncomingMessage;
 use PAMI\Message\Action\LoginAction;
-use PAMI\Message\Action\LogoffAction;
 use PAMI\Message\Response\ResponseMessage;
-use PAMI\Message\Event\EventMessage;
 use PAMI\Message\Event\Factory\Impl\EventFactoryImpl;
 use PAMI\Listener\IEventListener;
 use PAMI\Client\Exception\ClientException;
@@ -58,7 +56,7 @@ class ClientImpl implements IClient
 {
     /**
      * log4php logger or dummy.
-     * @var Logger
+     * @var \Logger
      */
     // private $_logger;
 
@@ -157,7 +155,7 @@ class ClientImpl implements IClient
     /**
      * Opens a tcp connection to ami.
      *
-     * @throws PAMI\Client\Exception\ClientException
+     * @throws \PAMI\Client\Exception\ClientException
      * @return void
      */
     public function open()
@@ -229,6 +227,7 @@ class ClientImpl implements IClient
     /**
      * Reads a complete message over the stream until EOM.
      *
+     * @throws \PAMI\Client\Exception\ClientException
      * @return string
      */
     protected function getMessages()
@@ -299,7 +298,7 @@ class ClientImpl implements IClient
      *
      * @param IncomingMessage $message Message sent by asterisk.
      *
-     * @return PAMI\Message\Response\ResponseMessage
+     * @return \PAMI\Message\Response\ResponseMessage
      */
     protected function findResponse(IncomingMessage $message)
     {
@@ -313,7 +312,7 @@ class ClientImpl implements IClient
     /**
      * Dispatchs the incoming message to a handler.
      *
-     * @param PAMI\Message\IncomingMessage $message Message to dispatch.
+     * @param \PAMI\Message\IncomingMessage $message Message to dispatch.
      *
      * @return void
      */
@@ -340,7 +339,7 @@ class ClientImpl implements IClient
      *
      * @param string $msg Raw string.
      *
-     * @return PAMI\Message\Response\ResponseMessage
+     * @return \PAMI\Message\Response\ResponseMessage
      */
     private function _messageToResponse($msg)
     {
@@ -358,7 +357,7 @@ class ClientImpl implements IClient
      *
      * @param string $msg Raw string.
      *
-     * @return PAMI\Message\Event\EventMessage
+     * @return \PAMI\Message\Event\EventMessage
      */
     private function _messageToEvent($msg)
     {
@@ -371,7 +370,8 @@ class ClientImpl implements IClient
      *
      * @todo not suitable for multithreaded applications.
      *
-     * @return PAMI\Message\IncomingMessage
+     * @param \PAMI\Message\OutgoingMessage $message
+     * @return \PAMI\Message\IncomingMessage
      */
     protected function getRelated(OutgoingMessage $message)
     {
@@ -390,11 +390,11 @@ class ClientImpl implements IClient
     /**
      * Sends a message to ami.
      *
-     * @param PAMI\Message\OutgoingMessage $message Message to send.
-     *
+     * @param \PAMI\Message\OutgoingMessage $message Message to send.
+     * @param int $timeout
      * @see ClientImpl::send()
-     * @throws PAMI\Client\Exception\ClientException
-     * @return PAMI\Message\Response\ResponseMessage
+     * @throws \PAMI\Client\Exception\ClientException
+     * @return \PAMI\Message\Response\ResponseMessage
      */
     public function send(OutgoingMessage $message, $timeout = -1)
     {
@@ -402,7 +402,7 @@ class ClientImpl implements IClient
         $length = strlen($messageToSend);
         //if ($this->_logger && $this->_logger->isDebugEnabled()) {
         //    $this->_logger->debug(
-        //    	'------ Sending: ------ ' . "\n" . $messageToSend . '----------'
+        //      '------ Sending: ------ ' . "\n" . $messageToSend . '----------'
         //    );
         //}
         $this->_lastActionId = $message->getActionId();
@@ -446,8 +446,7 @@ class ClientImpl implements IClient
      * Constructor.
      *
      * @param string[] $options Options for ami client.
-     *
-     * @return void
+     * @return \PAMI\Client\Impl\ClientImpl
      */
     public function __construct(array $options)
     {

@@ -47,9 +47,9 @@ class DBDelAction extends ActionMessage
      * Constructor.
      *
      * @param string $family Family.
-     * @param string $key    Name.
+     * @param string $key Name.
      *
-     * @return void
+     * @return \PAMI\Message\Action\DBDelAction
      */
     public function __construct($family, $key)
     {

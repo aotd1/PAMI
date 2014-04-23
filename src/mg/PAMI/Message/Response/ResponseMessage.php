@@ -29,7 +29,6 @@
  */
 namespace PAMI\Message\Response;
 
-use PAMI\Message\Message;
 use PAMI\Message\IncomingMessage;
 use PAMI\Message\Event\EventMessage;
 
@@ -166,7 +165,7 @@ class ResponseMessage extends IncomingMessage
      *
      * @param string $rawContent Literal message as received from ami.
      *
-     * @return void
+     * @return \PAMI\Message\Response\ResponseMessage
      */
     public function __construct($rawContent)
     {

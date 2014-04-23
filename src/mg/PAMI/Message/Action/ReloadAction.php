@@ -46,9 +46,9 @@ class ReloadAction extends ActionMessage
     /**
      * Constructor.
      *
-     * @param string $module Optional module name.
+     * @param bool|string $module Optional module name.
      *
-     * @return void
+     * @return \PAMI\Message\Action\ReloadAction
      */
     public function __construct($module = false)
     {

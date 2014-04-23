@@ -48,7 +48,7 @@ class CommandAction extends ActionMessage
      *
      * @param string $command CLI Command to issue.
      *
-     * @return void
+     * @return \PAMI\Message\Action\CommandAction
      */
     public function __construct($command)
     {

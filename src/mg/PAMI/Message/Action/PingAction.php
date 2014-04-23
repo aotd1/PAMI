@@ -46,7 +46,7 @@ class PingAction extends ActionMessage
     /**
      * Constructor.
      *
-     * @return void
+     * @return \PAMI\Message\Action\PingAction
      */
     public function __construct()
     {

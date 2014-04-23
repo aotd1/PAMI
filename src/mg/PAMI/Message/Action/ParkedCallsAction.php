@@ -46,7 +46,7 @@ class ParkedCallsAction extends ActionMessage
     /**
      * Constructor.
      *
-     * @return void
+     * @return \PAMI\Message\Action\ParkedCallsAction
      */
     public function __construct()
     {

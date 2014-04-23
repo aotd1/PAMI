@@ -95,10 +95,10 @@ class QueueAddAction extends ActionMessage
     /**
      * Constructor.
      *
-     * @param string $queue     Queue name
+     * @param string $queue Queue name
      * @param string $interface Interface ... ?
      *
-     * @return void
+     * @return \PAMI\Message\Action\QueueAddAction
      */
     public function __construct($queue, $interface)
     {

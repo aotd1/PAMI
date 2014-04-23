@@ -47,9 +47,9 @@ class MeetmeUnmuteAction extends ActionMessage
      * Constructor.
      *
      * @param string $conference Conference number.
-     * @param string $user       User.
+     * @param string $user User.
      *
-     * @return void
+     * @return \PAMI\Message\Action\MeetmeUnmuteAction
      */
     public function __construct($conference, $user)
     {

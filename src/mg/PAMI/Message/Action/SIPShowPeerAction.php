@@ -48,7 +48,7 @@ class SIPShowPeerAction extends ActionMessage
      *
      * @param string $peer Peer name.
      *
-     * @return void
+     * @return \PAMI\Message\Action\SIPShowPeerAction
      */
     public function __construct($peer)
     {

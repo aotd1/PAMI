@@ -48,7 +48,7 @@ class DongleStartAction extends ActionMessage
      *
      * @param string $device Dongle device name.
      *
-     * @return void
+     * @return \PAMI\Message\Action\DongleStartAction
      */
     public function __construct($device)
     {

@@ -46,7 +46,7 @@ class CoreSettingsAction extends ActionMessage
     /**
      * Constructor.
      *
-     * @return void
+     * @return \PAMI\Message\Action\CoreSettingsAction
      */
     public function __construct()
     {

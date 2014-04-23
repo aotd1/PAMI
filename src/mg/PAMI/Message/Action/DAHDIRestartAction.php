@@ -46,7 +46,7 @@ class DAHDIRestartAction extends ActionMessage
     /**
      * Constructor.
      *
-     * @return void
+     * @return \PAMI\Message\Action\DAHDIRestartAction
      */
     public function __construct()
     {

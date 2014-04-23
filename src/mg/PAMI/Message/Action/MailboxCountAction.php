@@ -48,7 +48,7 @@ class MailboxCountAction extends ActionMessage
      *
      * @param string $mailbox MailboxId (mailbox@vm-context)
      *
-     * @return void
+     * @return \PAMI\Message\Action\MailboxCountAction
      */
     public function __construct($mailbox)
     {

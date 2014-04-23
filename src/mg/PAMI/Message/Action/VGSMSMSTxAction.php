@@ -85,7 +85,7 @@ class VGSMSMSTxAction extends ActionMessage
     /**
      * Sets Chip Id - It will use the chip_id provided.Optional
      *
-     * @param string $me_id Chip Id to use format meX , eg. me0 for VGSM 2 cards
+     * @param string $id Chip Id to use format meX , eg. me0 for VGSM 2 cards
      *
      * @return void
      */
@@ -109,7 +109,7 @@ class VGSMSMSTxAction extends ActionMessage
     /**
      * Sets X-SMS-Class  key. Optional
      *
-     * @param string $sms_class Class of SMS to send. Values are 0, 1. 0 is Flash message.
+     * @param string $class Class of SMS to send. Values are 0, 1. 0 is Flash message.
      *
      * @return void
      */
@@ -123,6 +123,7 @@ class VGSMSMSTxAction extends ActionMessage
      * Sets X-SMS-Concatenate-RefID . Optional. Should be set with
      * setConcatSeqNum and setConcatSeqNum
      *
+     * @param $refid
      * @return void
      */
     public function setConcatRefId($refid)
@@ -134,6 +135,7 @@ class VGSMSMSTxAction extends ActionMessage
      * Sets X-SMS-Concatenate-Sequence-Number. Optional. Should be set with
      * setConcatSeqNum: setConcatTotalMsg
      *
+     * @param $seqnum
      * @return void
      */
     public function setConcatSeqNum($seqnum)
@@ -145,6 +147,7 @@ class VGSMSMSTxAction extends ActionMessage
      * Sets X-SMS-Concatenate-Total-Messages. Optional. Should be set with
      * setConcatRefId and setConcatSeqNum
      *
+     * @param $totalmsg
      * @return void
      */
     public function setConcatTotalMsg($totalmsg)
@@ -155,7 +158,7 @@ class VGSMSMSTxAction extends ActionMessage
     /**
      * Sets Account key.
      *
-     * @param string Account code.
+     * @param string $account Account code.
      *
      * @return void
      */
@@ -167,7 +170,7 @@ class VGSMSMSTxAction extends ActionMessage
     /**
      * Constructor.
      *
-     * @return void
+     * @return \PAMI\Message\Action\VGSMSMSTxAction
      */
     public function __construct()
     {

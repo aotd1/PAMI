@@ -46,7 +46,9 @@ class DAHDIDialOffHookAction extends ActionMessage
     /**
      * Constructor.
      *
-     * @return void
+     * @param string $channel
+     * @param string $number
+     * @return \PAMI\Message\Action\DAHDIDialOffHookAction
      */
     public function __construct($channel, $number)
     {

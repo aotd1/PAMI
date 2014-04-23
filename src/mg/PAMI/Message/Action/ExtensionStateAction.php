@@ -46,10 +46,10 @@ class ExtensionStateAction extends ActionMessage
     /**
      * Constructor.
      *
-     * @param string $exten   Extension to check for.
+     * @param string $exten Extension to check for.
      * @param string $context Context for extension.
      *
-     * @return void
+     * @return \PAMI\Message\Action\ExtensionStateAction
      */
     public function __construct($exten, $context)
     {

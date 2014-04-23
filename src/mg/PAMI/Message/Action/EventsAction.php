@@ -48,7 +48,7 @@ class EventsAction extends ActionMessage
      *
      * @param string[] $mask Asterisk events to handle (system, call, log, etc).
      *
-     * @return void
+     * @return \PAMI\Message\Action\EventsAction
      */
     public function __construct(array $mask = array())
     {

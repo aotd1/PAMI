@@ -47,10 +47,10 @@ class DBPutAction extends ActionMessage
      * Constructor.
      *
      * @param string $family Family.
-     * @param string $key    Name.
-     * @param string $value  Value.
+     * @param string $key Name.
+     * @param string $value Value.
      *
-     * @return void
+     * @return \PAMI\Message\Action\DBPutAction
      */
     public function __construct($family, $key, $value)
     {

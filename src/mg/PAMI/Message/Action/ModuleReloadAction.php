@@ -56,7 +56,7 @@ class ModuleReloadAction extends ActionMessage
      * rtp
      * http Module name.
      *
-     * @return void
+     * @return \PAMI\Message\Action\ModuleReloadAction
      */
     public function __construct($module)
     {

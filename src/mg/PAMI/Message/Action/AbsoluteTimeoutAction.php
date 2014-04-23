@@ -46,10 +46,10 @@ class AbsoluteTimeoutAction extends ActionMessage
     /**
      * Constructor.
      *
-     * @param string  $channel Channel to work on.
+     * @param string $channel Channel to work on.
      * @param integer $timeout Maximum duration of the call (sec).
      *
-     * @return void
+     * @return \PAMI\Message\Action\AbsoluteTimeoutAction
      */
     public function __construct($channel, $timeout)
     {

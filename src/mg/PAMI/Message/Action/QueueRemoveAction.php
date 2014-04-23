@@ -46,10 +46,10 @@ class QueueRemoveAction extends ActionMessage
     /**
      * Constructor.
      *
-     * @param string $queue     The queue.
+     * @param string $queue The queue.
      * @param string $interface The interface.
      *
-     * @return void
+     * @return \PAMI\Message\Action\QueueRemoveAction
      */
     public function __construct($queue, $interface)
     {

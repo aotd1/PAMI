@@ -94,12 +94,12 @@ class RedirectAction extends ActionMessage
     /**
      * Constructor.
      *
-     * @param string $channel   Channel to redirect.
+     * @param string $channel Channel to redirect.
      * @param string $extension Extension to transfer to.
-     * @param string $context   Context to transfer to.
-     * @param string $priority  Priority to transfer to.
+     * @param string $context Context to transfer to.
+     * @param string $priority Priority to transfer to.
      *
-     * @return void
+     * @return \PAMI\Message\Action\RedirectAction
      */
     public function __construct($channel, $extension, $context, $priority)
     {

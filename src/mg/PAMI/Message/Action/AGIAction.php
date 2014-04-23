@@ -46,7 +46,10 @@ class AGIAction extends ActionMessage
     /**
      * Constructor.
      *
-     * @return void
+     * @param string $channel
+     * @param string $command
+     * @param int|bool $commandId
+     * @return \PAMI\Message\Action\AGIAction
      */
     public function __construct($channel, $command, $commandId = false)
     {
