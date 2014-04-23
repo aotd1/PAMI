@@ -73,7 +73,7 @@ class EventFactoryImpl
         if (class_exists($className, true)) {
             return new $className($message);
         }
-	    return new UnknownEvent($message);
+        return new UnknownEvent($message);
     }
 
     /**

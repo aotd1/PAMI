@@ -105,8 +105,7 @@ class MyPAGIApplication extends PAGIApplication
      */
     public function shutdown()
     {
-        try
-        {
+        try {
             $this->log('Shutdown');
             $client = $this->getAgi();
             $client->hangup();
@@ -291,7 +290,7 @@ class MyPAGIApplication extends PAGIApplication
     public function errorHandler($type, $message, $file, $line)
     {
         $this->log(
-        	'ErrorHandler: '
+            'ErrorHandler: '
             . implode(' ', array($type, $message, $file, $line))
         );
     }

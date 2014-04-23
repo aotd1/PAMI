@@ -17,4 +17,3 @@ $phar = new Phar($argv[1]);
 $phar->setAlias('pami.phar');
 $phar->buildFromDirectory($argv[2]);
 $phar->setStub($stub);
-

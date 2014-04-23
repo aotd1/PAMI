@@ -55,7 +55,7 @@ class vgsm_me_stateEvent extends EventMessage
         return $this->getKey('Privilege');
     }
 
-	/**
+    /**
      * Returns key: 'X-vGSM-ME-State'.
      *
      * @return string
@@ -65,7 +65,7 @@ class vgsm_me_stateEvent extends EventMessage
         return $this->getKey('X-vGSM-ME-State');
     }
 
-	/**
+    /**
      * Returns key: 'X-vGSM-ME-Old-State'.
      *
      * @return string
@@ -75,7 +75,7 @@ class vgsm_me_stateEvent extends EventMessage
         return $this->getKey('X-vGSM-ME-Old-State');
     }
 
-	/**
+    /**
      * Returns key: 'X-vGSM-ME-State-Change-Reason'.
      *
      * @return string

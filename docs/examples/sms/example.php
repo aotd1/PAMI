@@ -73,8 +73,7 @@ class A implements IEventListener
         if ($event->getContentEncoding()=='base64'){
 
             echo base64_decode($event->getContent());
-            }
-        else{
+            } else{
             echo 'Unrecognized encoding - printing message in this encoding :  ' ;
             $event->getContentEncoding();
             echo '\n Message:  ' ;
@@ -133,8 +132,7 @@ try
     $a->send($sms);
 
     $time = time();
-    while(true)//(time() - $time) < 60) // Wait for events.
-    {
+    while(true)//(time() - $time) < 60) { // Wait for events.
         usleep(1000); // 1ms delay
         // Since we declare(ticks=1) at the top, the following line is not necessary
         $a->process();

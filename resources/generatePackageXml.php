@@ -35,14 +35,16 @@ $installPath = "/$name";
   <dir baseinstalldir="<?php echo $installPath; ?>" name="<?php echo $src; ?>/">
 <?php
 
-function dumpFileInfo($realPath, $pearPath) {
+function dumpFileInfo($realPath, $pearPath)
+{
     global $installPath;
 ?>
 <file baseinstalldir="<?php echo $installPath; ?>" md5sum="<?php echo md5_file($realPath); ?>" name="<?php echo $pearPath; ?>" role="php" />
 <?php
 }
 
-function generateFileInfo($realPath, $pearPath) {
+function generateFileInfo($realPath, $pearPath)
+{
     foreach (scandir($realPath) as $entry) {
         if ($entry == '.' || $entry == '..') {
             continue;

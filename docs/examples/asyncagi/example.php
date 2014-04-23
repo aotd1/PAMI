@@ -70,8 +70,7 @@ class ListenerTest implements IEventListener
     {
         if ($event instanceof \PAMI\Message\Event\AsyncAGIEvent) {
             if ($event->getSubEvent() == 'Start') {
-                switch($pid = pcntl_fork())
-                {
+                switch($pid = pcntl_fork()) {
                     case 0:
                         $logger = \Logger::getLogger(__CLASS__);
                         $this->_client = new ClientImpl($this->_pamiOptions);
@@ -109,13 +108,12 @@ class ListenerTest implements IEventListener
     public function run()
     {
         $this->_client->open();
-    	while(true)
-    	{
-    	    usleep(1000);
-    	    $this->_client->process();
+        while(true) {
+            usleep(1000);
+            $this->_client->process();
             pcntl_wait($status);
-    	}
-    	$this->_client->close();
+        }
+        $this->_client->close();
     }
     public function __construct(array $pamiOptions)
     {
@@ -130,8 +128,7 @@ class ListenerTest implements IEventListener
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
 
-try
-{
+try {
     $options = array(
         'log4php.properties' => realpath(__DIR__) . DIRECTORY_SEPARATOR . 'log4php.properties',
         'host' => $argv[1],
@@ -142,10 +139,10 @@ try
         'read_timeout' => $argv[6],
         'scheme' => 'tcp://' // try tls://
     );
-	$listener = new ListenerTest($options);
-	$listener->run();
+    $listener = new ListenerTest($options);
+    $listener->run();
 } catch (Exception $e) {
-	echo $e->getMessage() . "\n";
+    echo $e->getMessage() . "\n";
 }
 ////////////////////////////////////////////////////////////////////////////////
 // Code ENDS.
